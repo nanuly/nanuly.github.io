@@ -8,6 +8,14 @@
 <link href="//fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
+
+<!-- jQuery library (served from Google) -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="../js/jquery.bxslider/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="../js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+
 <body>
     <section id="header">
         <header>
@@ -51,27 +59,21 @@
         </header>
     </section>
     <section id="slide">
-        <div class="wrap-slide">
-            <div class="slide-img slide01">
-                <div class="slide-txt">
-                    <h2 class="eng">COMFORTABLE</h2>
-                    <h3>쉽고 편한 웹 서비스를 제공합니다</h3>
-                </div>
-            </div>
-            <div class="slide-img slide02">
-                <div class="slide-txt">
-                    <h2 class="eng">FOR BUSINESS</h2>
-                    <h3>기업을 위한 다양한 솔루션을 확인해 보세요</h3>
-                </div>
-            </div>
-        </div> 
-        <a href="#" class="control" id="btn_prev">prev</a>
+        <ul class="wrap-slide">
+            <li class="slide-img slide01">
+                <div class="slide-txt"><h2 class="eng">COMFORTABLE</h2><h3>쉽고 편한 웹 서비스를 제공합니다</h3></div>
+            </li>
+            <li class="slide-img slide02">
+                <div class="slide-txt"><h2 class="eng">FOR BUSINESS</h2><h3>기업을 위한 다양한 솔루션을 확인해 보세요</h3></div>
+            </li>
+        </ul> 
+        <!--a href="#" class="control" id="btn_prev">prev</a>
         <a href="#" class="control" id="btn_next">next</a>
         <ul class="slide-indicators">
             <li class="slide-pos active"></li>
             <li class="slide-pos"></li>
             <li class="slide-pos"></li>
-        </ul>
+        </ul-->
     </section>
     <section id="main">
         <div class="content">
@@ -182,6 +184,10 @@
                 $(this).find('>a.active').css('color','#8ac469');
             }
         );
+        
+        $('.wrap-slide').bxSlider({
+            auto: true
+        });
     });
     </script>
 </body>
