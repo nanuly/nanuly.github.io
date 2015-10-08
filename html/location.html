@@ -11,7 +11,7 @@
 <script type="text/javascript">
         try {document.execCommand('BackgroundImageCache', false, true);} catch(e) {}
 </script>
-<script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=발급받은 key 값"></script>
+<script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=d7acb672ffbb4d7dc949cb16371acb20"></script>
 </head>
 <body>
     <section id="header">
@@ -68,12 +68,12 @@
                 <li><a href="incruit.html">채용</a></li>
                 <li><a class="active" href="location.html">오시는 길</a></li>
             </ul>
-        </div>
-        <div class="content">
+        </div><!--
+     --><div class="content">
             <div class="location">
-                <div class="map">
+                <div class="map" style="border:1px solid #8ac469; width:100%;">
                     <!--img src="../img/img_map.jpg"-->
-                    <div id="nanuly_map" style="border:1px solid #8ac469; width:500px; height:400px; margin:20px;"></div>
+                    <div id="nanuly_map"></div>
                 </div>
                 <div class="location-info">
                     <table class="table">
@@ -178,7 +178,7 @@
                                     activateTrafficMap : false,
                                     activateBicycleMap : false,
                                     minMaxLevel : [ 1, 14 ],
-                                    size : new nhn.api.map.Size(500, 400)
+                                    size : new nhn.api.map.Size(708, 398)
                             });
             var mapZoom = new nhn.api.map.ZoomControl(); // - 줌 컨트롤 선언
             mapZoom.setPosition({left:20, bottom:20}); // - 줌 컨트롤 위치 지정.
