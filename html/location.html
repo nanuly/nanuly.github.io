@@ -8,6 +8,11 @@
 <link href="//fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+        try {document.execCommand('BackgroundImageCache', false, true);} catch(e) {}
+</script>
+<script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=발급받은 key 값"></script>
+</head>
 <body>
     <section id="header">
         <header>
@@ -63,11 +68,12 @@
                 <li><a href="incruit.html">채용</a></li>
                 <li><a class="active" href="location.html">오시는 길</a></li>
             </ul>
-        </div><!--
-     --><div class="content">
+        </div>
+        <div class="content">
             <div class="location">
                 <div class="map">
-                    <img src="../img/img_map.jpg">
+                    <!--img src="../img/img_map.jpg"-->
+                    <div id="nanuly_map" style="border:1px solid #8ac469; width:500px; height:400px; margin:20px;"></div>
                 </div>
                 <div class="location-info">
                     <table class="table">
@@ -159,6 +165,39 @@
     </section>
     <script>
     $(document).ready(function() {
+        
+        var oPoint = new nhn.api.map.LatLng(37.3810994, 126.6425142);
+            nhn.api.map.setDefaultPoint('LatLng');
+            oMap = new nhn.api.map.Map('nanuly_map' ,{
+                                    point : oPoint,
+                                    zoom : 11,
+                                    enableWheelZoom : true,
+                                    enableDragPan : true,
+                                    enableDblClickZoom : false,
+                                    mapMode : 0,
+                                    activateTrafficMap : false,
+                                    activateBicycleMap : false,
+                                    minMaxLevel : [ 1, 14 ],
+                                    size : new nhn.api.map.Size(500, 400)
+                            });
+            var mapZoom = new nhn.api.map.ZoomControl(); // - 줌 컨트롤 선언
+            mapZoom.setPosition({left:20, bottom:20}); // - 줌 컨트롤 위치 지정.
+            oMap.addControl(mapZoom); // - 줌 컨트롤 추가.
+            
+            var oSize = new nhn.api.map.Size(28, 37);
+            var oOffset = new nhn.api.map.Size(14, 37);
+            var oIcon = new nhn.api.map.Icon('http://static.naver.com/maps2/icons/pin_spot2.png', oSize, oOffset);
+            // - Draggable Marker 의 경우 Icon 인자는 Sprite Icon이 된다.
+            // - 따라서 Sprite Icon 을 사용하기 위해 기본적으로 사용되는 값을 지정한다.
+            // - Sprite Icon 을 사용하기 위해서 상세한 내용은 레퍼런스 페이지의 nhn.api.map.SpriteIcon 객체를 참조하면 된다.
+            
+            var oMarker1 = new nhn.api.map.Marker(oIcon, { title : '나누리' });  //마커 생성 
+            oMarker1.setPoint(oPoint); //마커 표시할 좌표 선택
+            oMap.addOverlay(oMarker1); //마커를 지도위에 표현 
+            var oLabel1 = new nhn.api.map.MarkerLabel(); // - 마커 라벨 선언. 
+            oMap.addOverlay(oLabel1); // - 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨. 
+            oLabel1.setVisible(true, oMarker1); // 마커 라벨 보이기 
+        
         $('nav > ul > li').hover(
             function() {
                 $(this).find('>a').css('color','#8ac469');
