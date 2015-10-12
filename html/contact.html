@@ -8,6 +8,7 @@
 <link href="//fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
+
 <body>
     <section id="header">
         <header>
@@ -69,28 +70,28 @@
                     * 궁금하신 부분을 아래 항목에 적어서 보내 주시면 최대한 빠른 시간내에 답변드리겠습니다.
                 </div>
                 <div class="wrap-form">
-                    <form role="form" method="POST">
+                    <form id="ajax-contact" method="post" action="/html/send_mail.php">
                         <div class="form-group">
                             <label>제목</label>
-                            <input type="text" placeholder="제목을 입력해주세요"></input>
+                            <input type="text" id="subject" name="subject" placeholder="제목을 입력해주세요" required></input>
                         </div>
                         <div class="form-group">
                             <label>문의 내용</label>
-                            <textarea placeholder="내용을 입력해주세요"></textarea>
+                            <textarea id="message" name="message" placeholder="내용을 입력해주세요" required></textarea>
                         </div>
                         <div class="form-group">
                             <label>메일 주소</label>
-                            <input type="email" placeholder="답변 받으실 메일 주소를 입력해 주세요"></input>
+                            <input type="email" id="email" name="email" placeholder="답변 받으실 메일 주소를 입력해 주세요" required></input>
                         </div>
                         <div class="form-group">
                             <label>연락처</label>
-                            <input type="tel" placeholder="전화답변을 원하시면 연락처를 남겨 주세요"></input>
+                            <input type="tel" id="tel" name="tel" placeholder="전화답변을 원하시면 연락처를 남겨 주세요"></input>
+                        </div>
+                        <div class="btn-group">
+                            <a class="btn gray lg" href="index.html">취소</a><!--
+                        --><button type="submit" class="btn green lg">보내기</button>
                         </div>
                     </form>
-                    <div class="btn-group">
-                        <a class="btn gray lg" href="index.html">취소</a><!--
-                     --><a class="btn green lg" href="contact_ok.html">보내기</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -133,22 +134,22 @@
                 <ul>
                     <li>
                         <a href="#">
-                            <img src="../img/btn_fb.png">
+                            <img src="../img/btn_geeks.png">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="../img/btn_tw.png">
+                            <img src="../img/btn_git.png">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="../img/btn_google.png">
+                            <img src="../img/btn_insta.png">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="../img/btn_kakao.png">
+                            <img src="../img/btn_story.png">
                         </a>
                     </li>
                 </ul>
@@ -158,20 +159,20 @@
             </address>
         </footer>
     </section>
-    <script>
-    $(document).ready(function() {
-        $('nav > ul > li').hover(
-            function() {
-                $(this).find('>a').css('color','#8ac469');
-                $(this).find('>.dropdown').addClass('active');
-            },
-            function() {
-                $(this).find('>a').css('color','#414141');
-                $(this).find('>.dropdown').removeClass('active');
-                $(this).find('>a.active').css('color','#8ac469');
-            }
-        );
-    });
-    </script>
+<script>
+$(document).ready(function() {
+    $('nav > ul > li').hover(
+        function() {
+            $(this).find('>a').css('color','#8ac469');
+            $(this).find('>.dropdown').addClass('active');
+        },
+        function() {
+            $(this).find('>a').css('color','#414141');
+            $(this).find('>.dropdown').removeClass('active');
+            $(this).find('>a.active').css('color','#8ac469');
+        }
+    );
+});
+</script>
 </body>
 </html>
