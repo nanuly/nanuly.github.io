@@ -70,7 +70,7 @@
                     * 궁금하신 부분을 아래 항목에 적어서 보내 주시면 최대한 빠른 시간내에 답변드리겠습니다.
                 </div>
                 <div class="wrap-form">
-                    <form id="ajax-contact" method="post" action="/html/send_mail.php">
+                    <form id="ajax-contact">
                         <div class="form-group">
                             <label>제목</label>
                             <input type="text" id="subject" name="subject" placeholder="제목을 입력해주세요" required></input>
@@ -89,9 +89,11 @@
                         </div>
                         <div class="btn-group">
                             <a class="btn gray lg" href="index.html">취소</a><!--
-                        --><button type="submit" class="btn green lg">보내기</button>
+                        --><button id="contact_btn" type="button" class="btn green lg">보내기</button>
                         </div>
                     </form>
+                </div>
+                <div class="wrap-form" id="form-messages">
                 </div>
             </div>
         </div>
@@ -172,6 +174,50 @@ $(document).ready(function() {
             $(this).find('>a.active').css('color','#8ac469');
         }
     );
+
+    $("#contact_btn").click(function() {
+        // Get the form.
+        var form = $('#ajax-contact');
+
+        var formData = $(form).serialize();
+        var formMessages = $('#form-messages');
+        /*
+        $.get('http://geeks.nanuly.dev/helpdesk/softs-contact',
+            { "a" : "10" },
+            function(data){
+                data.id
+                console.log( data );            
+            } ,
+            'json'
+        );
+        return;
+        */
+        
+        $.ajax({
+            type: 'GET',
+            url: 'http://geeks.nanuly.dev/helpdesk/softs-contact',
+            data: formData
+        }).done(function(response) {
+
+            // Clear the form.
+            $('#subject').val('');
+            $('#email').val('');
+            $('#message').val('');
+            $('#tel').val('');
+
+            location.replace('/html/contact_ok.html');
+
+        }).fail(function(data) {    
+            // Set the message text.
+            if (data.responseText !== '') {
+                $(formMessages).text(data.responseText);
+                //alert('성공');
+            } else {
+                $(formMessages).text('Oops! An error occured and your message could not be sent.');
+                //alert('실패');
+            }
+        });
+    });
 });
 </script>
 </body>
