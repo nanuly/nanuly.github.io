@@ -176,22 +176,11 @@ $(document).ready(function() {
     );
 
     $("#contact_btn").click(function() {
-        // Get the form.
-        var form = $('#ajax-contact');
 
+        var form = $('#ajax-contact');
         var formData = $(form).serialize();
         var formMessages = $('#form-messages');
-        /*
-        $.get('http://geeks.nanuly.dev/helpdesk/softs-contact',
-            { "a" : "10" },
-            function(data){
-                data.id
-                console.log( data );            
-            } ,
-            'json'
-        );
-        return;
-        */
+
         if ( $('#subject').val() === '' ) {
             alert('제목을 입력해주세요.');
             $('#subject').focus();
@@ -214,7 +203,7 @@ $(document).ready(function() {
         var isHan = /[ㄱ-ㅎ가-힣]/g;
         
         if (!isEmail.test($('#email').val()) || isHan.test($('#email').val())) {
-            alert('E-mail 주소를 다시 확인해주세요.');
+            alert('올바른 E-mail 주소 형식이 아닙니다.');
             $('#email').focus();
             return false;
         }
@@ -225,7 +214,6 @@ $(document).ready(function() {
             data: formData
         }).done(function(response) {
 
-            // Clear the form.
             $('#subject').val('');
             $('#email').val('');
             $('#message').val('');
@@ -234,13 +222,10 @@ $(document).ready(function() {
             location.replace('/html/contact_ok.html');
 
         }).fail(function(data) {    
-            // Set the message text.
             if (data.responseText !== '') {
                 $(formMessages).text(data.responseText);
-                //alert('성공');
             } else {
-                //$(formMessages).text('Oops! An error occured and your message could not be sent.');
-                alert('메일 보내기에 실패했습니다. 잠시 후에 다시 시도해주세요.');
+                alert('불편을 드려 죄송합니다. 서버가 응답하지 않습니다. \n\n 문제가 반복될 경우 help@nanuly.kr 으로 문의해 주시면 고맙겠습니다. ');
             }
         });
     });
