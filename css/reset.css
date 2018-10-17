@@ -1,0 +1,15 @@
+*{font-family: 'Noto Sans', sans-serif; font-size:14px; color:#666; line-height:160%;} 
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,li,figure{margin:0; padding:0;}
+body,html{height:100%;}
+li{list-style:none;}
+a{text-decoration:none;}
+button{background:none; border:none; outline:none; cursor:pointer;}
+input,select,button{box-sizing:border-box;}
+body,html{height:100%;}
+a:hover{text-decoration:none;}
+table{border-spacing:0; border-collapse:collapse;}
+.clearfix:after{clear:both; display:block; content:"";}
+img{border:none;}
+.hidden_label{display:block; width:0 !important; height:0 !important; visibility:hidden; margin:0 !important; padding:0 !important;}
+
+#l_wrap{width: 100%;}

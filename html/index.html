@@ -1,189 +1,193 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="kr">
 <head>
-<meta charset="UTF-8">
-<title>나누리소프트</title>
-<meta content="IE=edge" http-equiv="X-UA-Compatible">
-<link href="../css/basic.css" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet" type="text/css">
-<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-<link rel="shortcut icon" href="/favicon.ico" >
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
-<script src="../js/jquery.bxslider/jquery.bxslider.min.js"></script>
-<link href="../js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>나누리소프트</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script><!--jquery 최신버전 호출-->
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/header.js"></script>
+    <script type="text/javascript" src="../js/home.js"></script>
+</head>
+
 <body>
-    <section id="header">
-        <header>
-            <h1 class="eng">
-                <a href="index.html">Nanuly<span style="font-weight: normal">Soft</span></a>
-            </h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="history.html">회사소개</a>
-                        <ul class="dropdown">
-                            <li><a href="history.html">연혁</a></li>
-                            <li><a href="incruit.html">채용</a></li>
-                            <li><a href="location.html">오시는 길</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="product_cards.html">제품</a>
-                        <ul class="dropdown">
-                            <li><a href="product_cards.html">나누리카드</a></li>
-                            <li><a href="product_boards.html">나누리보드</a></li>
-                            <li><a href="product_pages.html">나누리페이지</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="service_geeks.html">서비스</a>
-                        <ul class="dropdown">
-                            <li><a href="service_geeks.html">나누리재능인</a></li>
-                            <li><a href="service_cards.html">나누리카드</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="contact.html">고객지원</a>
-                        <ul class="dropdown">
-                            <li><a href="contact.html">일대일 문의</a></li>
-                            <li><a href="consulting.html">웹 컨설팅</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    </section>
-    <section id="slide">
-        <ul class="wrap-slide">
-            <li class="slide-img slide01">
-                <div class="slide-txt"><h2 class="eng">COMFORTABLE</h2><h3>쉽고 편한 웹 서비스를 제공합니다</h3></div>
-            </li>
-            <li class="slide-img slide02">
-                <div class="slide-txt"><h2 class="eng">FOR BUSINESS</h2><h3>기업을 위한 다양한 솔루션을 확인해 보세요</h3></div>
-            </li>
-        </ul> 
-        <!--a href="#" class="control" id="btn_prev">prev</a>
-        <a href="#" class="control" id="btn_next">next</a>
-        <ul class="slide-indicators">
-            <li class="slide-pos active"></li>
-            <li class="slide-pos"></li>
-            <li class="slide-pos"></li>
-        </ul-->
-    </section>
-    <section id="main">
-        <div class="content">
-            <h2 class="eng">OUR WORKS</h2>
-            <div class="works">
-                <ul>
-                    <li class="box">
-                        <a href="product_cards.html">
-                            <div>
-                                <img src="../img/img_card.jpg">
-                            </div>
-                            <p>나누리카드</p>
-                        </a>
-                    </li>
-                    <li class="box">
-                        <a href="product_boards.html">
-                            <div>
-                                <img src="../img/img_board.jpg">
-                            </div>
-                            <p>나누리보드</p>
-                        </a>
-                    </li>
-                    <li class="box">
-                        <a href="product_pages.html">
-                            <div>
-                                <img src="../img/img_page.jpg">
-                            </div>
-                            <p>나누리페이지</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <article id="l_wrap">
+        <div class="header_wrap">
+            <header class="header_box clearfix">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <span class="hidden_label">나누리소프트</span>
+                        <img src="../img/logo.png" alt="나누리소프트">
+                        <span class="logo_txt">NanulySoft</span>
+                    </a>
+                </h1>
+
+                <span class="gnb_curtain"></span>
+                <nav class="gnb">
+                    <ul class="gnb_ul_box">
+                        <li>
+                            <a href="history.html">회사소개</a>
+                            <ul>
+                                <li><a href="history.html">연혁</a></li>
+                                <li><a href="incruit.html">채용</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">제품</a>
+                            <ul>
+                                <li><a href="#">나누리카드</a></li>
+                                <li><a href="#">나누리보드</a></li>
+                                <li><a href="#">나누리페이지</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">서비스</a>
+                            <ul>
+                                <li><a href="#">나누리재능인</a></li>
+                                <li><a href="#">나누리카드</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">고객지원</a>
+                            <ul>
+                                <li><a href="#">일대일 문의</a></li>
+                                <li><a href="#">웹 컨설팅</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <div class="menu_btn_box">
+                    <button>
+                        <span class="bar1 active"></span>
+                        <span class="bar2"></span>
+                        <span class="bar3"></span>
+                    </button>
+                </div>
+
+
+                <nav class="snb">
+                    <ul>
+                        <li><a href="index.html" class="active">홈</a></li>
+                        <li>
+                            <a href="#">회사소개</a>
+                            <ul class="snb_box_ul">
+                                <li><a href="history.html">연혁</a></li>
+                                <li><a href="incruit.html">채용</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">제품</a>
+                            <ul class="snb_box_ul">
+                                <li><a href="#">나누리카드</a></li>
+                                <li><a href="#">나누리보드</a></li>
+                                <li><a href="#">나누리페이지</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">서비스</a>
+                            <ul class="snb_box_ul">
+                                <li><a href="#">나누리재능인</a></li>
+                                <li><a href="#">나누리카드</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">고객지원</a>
+                            <ul class="snb_box_ul">
+                                <li><a href="#">일대일 문의</a></li>
+                                <li><a href="#">웹 컨설팅</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                
+            </header>
         </div>
-    </section>
-    <section id="footer">
-        <footer>
-            <nav class="footer-nav">
-                <div class="nav-intro">
-                    <h3>회사소개</h3>
-                    <ul>
-                        <li><a href="history.html">연혁</a></li>
-                        <li><a href="incruit.html">채용</a></li>
-                        <li><a href="location.html">오시는 길</a></li>
-                    </ul>
-                </div>
-                <div class="nav-product">
-                    <h3>제품</h3>
-                    <ul>
-                        <li><a href="product_cards.html">나누리카드</a></li>
-                        <li><a href="product_boards.html">나누리보드</a></li>
-                        <li><a href="product_pages.html">나누리페이지</a></li>
-                    </ul>
-                </div>
-                <div class="nav-service">
-                    <h3>서비스</h3>
-                    <ul>
-                        <li><a href="service_geeks.html">나누리재능인</a></li>
-                        <li><a href="service_cards.html">나누리카드</a></li>
-                    </ul>
-                </div>
-                <div class="nav-customer">
-                    <h3>고객지원</h3>
-                    <ul>
-                        <li><a href="contact.html">일대일 문의</a></li>
-                        <li><a href="consulting.html">웹 컨설팅</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="share">
-                <ul>
-                    <li>
-                        <a href="http://www.nanuly.com/" target="_blank">
-                            <img src="../img/btn_geeks.png">
-                        </a>
+
+
+        <section class="home_section1">
+            <h3 class="hidden_label">home_section1</h3>
+            <div class="home_section1_box">
+                <span class="section1_txt">WelCome</span>
+                <br>
+                <span class="section1_txt">Nanu<span class="txt_color">ly</span> Soft</span>
+                <br>
+                <span class="section1_txt">Web Solution</span>
+            </div>
+        </section>
+
+        <section class="home_section2">
+            <h3 class="hidden_label">home_section2</h3>
+            <div class="home_slide_box1">
+                <ul class="home_slide1 clearfix">
+                    <li class="slider slider1">
+                        COMFORTABLE
                     </li>
-                    <li>
-                        <a href="https://github.com/nanuly" target="_blank">
-                            <img src="../img/btn_git.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com/nanuly.kr" target="_blank">
-                            <img src="../img/btn_insta.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://story.kakao.com/nanuly" target="_blank">
-                            <img src="../img/btn_story.png">
-                        </a>
+                    <li class="slider slider2">
+                        FOR BUSINESS
                     </li>
                 </ul>
+                <div class="slide_btn1 clearfix">
+                    <button class="btn_prve">&lt </button>
+                    <button class="btn_next">&gt </button>
+                    <p class="slide_btn1_txt slide_btn1_txt1 active" data-n="1">쉽고 편한 웹 서비스를 제공합니다</p>
+                    <p class="slide_btn1_txt slide_btn1_txt2" data-n="2">기업을 위한 다양한 솔루션을 확인해 보세요</p>
+                    
+                </div>
             </div>
-            <address>
-                Copyright © Nanuly, All rights reserved.
-            </address>
+        </section>
+
+
+        <section class="home_section3">
+            <h3 class="hidden_label">home_section3</h3>
+            <p>OUR WORKS</p>
+            <ul class="clearfix">
+                <li>
+                    <a href="#">
+                        <img src="../img/img_card.jpg" alt="나누리 카드">
+                        <p>나루리카드</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="../img/img_board.jpg" alt="나누리 보드">
+                        <p>나누리보드</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="../img/img_page.jpg" alt="나누리 페이지">
+                        <p>나누리페이지</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+
+        <footer>
+            
         </footer>
-    </section>
-    <script>
-    $(document).ready(function() {
-        $('nav > ul > li').hover(
-            function() {
-                $(this).find('>a').css('color','#8ac469');
-                $(this).find('>.dropdown').addClass('active');
-            },
-            function() {
-                $(this).find('>a').css('color','#414141');
-                $(this).find('>.dropdown').removeClass('active');
-                $(this).find('>a.active').css('color','#8ac469');
-            }
-        );
-        
-        $('.wrap-slide').bxSlider({
-            auto: true
-        });
-    });
-    </script>
+
+    </article>
 </body>
 </html>
