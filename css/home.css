@@ -59,7 +59,7 @@
 
 
 
-.home_section3{width: 95%; margin: 140px auto; max-width: 1400px;}
+.home_section3{width: 95%; margin: 0 auto; margin-top: 140px; max-width: 1400px;}
 
 .home_section3 > p{text-align: center; font-size: 40px; color:black; font-family: 'Poppins', sans-serif; font-weight: bold; position: relative;}
 
@@ -76,12 +76,12 @@
 	font-weight: bold; background: rgba(0,0,0,0.8); text-align: center; opacity: 0; transition: all 0.5s;}
 .home_section3 ul li:hover p{opacity: 1; top: 50%;}
 
-@media screen and (min-width:1025px){
+@media screen and (min-width:1155px){
 	.home_section3 ul li{float: left; width: 320px; margin:0 20px; }
 }
 
 
-@media screen and (max-width:1024px){
+@media screen and (max-width:1154px){
 	.home_section3 ul li{width: 320px; margin:20px auto;}
 }
 

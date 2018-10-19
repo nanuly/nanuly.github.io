@@ -1,215 +1,268 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="kr">
 <head>
-<meta charset="UTF-8">
-<title>나누리소프트</title>
-<meta content="IE=edge" http-equiv="X-UA-Compatible">
-<link href="../css/basic.css" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet" type="text/css">
-<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.js"></script>
-<script type="text/javascript">
-        try {document.execCommand('BackgroundImageCache', false, true);} catch(e) {}
-</script>
-<script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=52fde040120e186c936208fcd6987446"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>나누리소프트</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/company.css">
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script><!--jquery 최신버전 호출-->
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/header.js"></script>
+    <script type="text/javascript" src="../js/company.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=Y_LJJOCJGYNCQQ93Y9Tm&submodules=geocoder"></script>
 </head>
+
 <body>
-    <section id="header">
-        <header>
-            <h1 class="eng">
-                <a href="index.html">Nanuly<span style="font-weight: normal">Soft</span></a>
-            </h1>
-            <nav>
-                <ul>
+    <article id="l_wrap">
+        <div class="header_wrap">
+            <header class="header_box clearfix">
+                <h1 class="logo">
+                    <a href="index.html">
+                        <span class="hidden_label">나누리소프트</span>
+                        <img src="../img/logo.png" alt="나누리소프트">
+                        <span class="logo_txt">NanulySoft</span>
+                    </a>
+                </h1>
+
+                <span class="gnb_curtain"></span>
+                <nav class="gnb">
+                    <ul class="gnb_ul_box">
+                        <li>
+                            <a href="history.html" class="active">회사소개</a>
+                            <ul>
+                                <li><a href="history.html">연혁</a></li>
+                                <li><a href="incruit.html">채용</a></li>
+                                <li><a href="location.html" class="active">오시는길</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="product_cards.html">제품</a>
+                            <ul>
+                                <li><a href="product_cards.html">나누리카드</a></li>
+                                <li><a href="product_boards.html">나누리보드</a></li>
+                                <li><a href="product_pages.html">나누리페이지</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="service_geeks.html">서비스</a>
+                            <ul>
+                                <li><a href="service_geeks.html">나누리재능인</a></li>
+                                <li><a href="service_cards.html">나누리카드</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="contact.html">고객지원</a>
+                            <ul>
+                                <li><a href="contact.html">일대일 문의</a></li>
+                                <li><a href="consulting.html">웹 컨설팅</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <div class="menu_btn_box">
+                    <button>
+                        <span class="bar1 active"></span>
+                        <span class="bar2"></span>
+                        <span class="bar3"></span>
+                    </button>
+                </div>
+
+
+                <nav class="snb">
+                    <ul>
+                        <li><a href="index.html">홈</a></li>
+                        <li>
+                            <a href="#" class="active">회사소개</a>
+                            <ul class="snb_box_ul">
+                                <li><a href="history.html">연혁</a></li>
+                                <li><a href="incruit.html">채용</a></li>
+                                <li><a href="location.html">오시는길</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">제품</a>
+                            <ul class="snb_box_ul">
+                                <li><a href="product_cards.html">나누리카드</a></li>
+                                <li><a href="product_boards.html">나누리보드</a></li>
+                                <li><a href="product_pages.html">나누리페이지</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">서비스</a>
+                            <ul class="snb_box_ul">
+                                <li><a href="service_geeks.html">나누리재능인</a></li>
+                                <li><a href="service_cards.html">나누리카드</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">고객지원</a>
+                            <ul class="snb_box_ul">
+                                <li><a href="contact.html">일대일 문의</a></li>
+                                <li><a href="consulting.html">웹 컨설팅</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                
+            </header>
+        </div>
+
+
+        <section class="history_section1">
+            <nav class="lnb clearfix">
+                <ul class="lnb_left">
                     <li>
-                        <a class="active" href="history.html">회사소개</a>
-                        <ul class="dropdown">
+                        <a href="#">COMPANY</a>
+                        <ul>
+                            <li><a href="product_cards.html">PRODUCT</a></li>
+                            <li><a href="service_geeks.html">SERVICE</a></li>
+                            <li><a href="contact.html">CUSTOMER</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="lnb_right">
+                    <li>
+                        <a href="#">LOCATION</a>
+                        <ul>
                             <li><a href="history.html">연혁</a></li>
                             <li><a href="incruit.html">채용</a></li>
-                            <li><a class="active" href="location.html">오시는 길</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="product_cards.html">제품</a>
-                        <ul class="dropdown">
-                            <li><a href="product_cards.html">나누리카드</a></li>
-                            <li><a href="product_boards.html">나누리보드</a></li>
-                            <li><a href="product_pages.html">나누리페이지</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="service_geeks.html">서비스</a>
-                        <ul class="dropdown">
-                            <li><a href="service_geeks.html">나누리재능인</a></li>
-                            <li><a href="service_cards.html">나누리카드</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="contact.html">고객지원</a>
-                        <ul class="dropdown">
-                            <li><a href="contact.html">일대일 문의</a></li>
-                            <li><a href="consulting.html">웹 컨설팅</a></li>
+                            <li><a href="location.html" class="active">오시는길</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
-        </header>
-    </section>
-    <section id="title">
-        <h3 class="eng">LOCATION</h3>
-    </section>
-    <section id="container">
-        <div class="subnav">
-            <div class="nav-title">
-                <h2 class="eng">COMPANY</h2>
+        </section>
+
+
+        <section class="history_section2 location_section1">
+            <h3>LOCATION</h3>
+
+
+            <div id="map" style="width:100%;height:400px;"></div>
+            <script>
+              var map = new naver.maps.Map('map');
+              var myaddress = '인천광역시 연수구 갯벌로 12 ';// 도로명 주소나 지번 주소만 가능 (건물명 불가!!!!)
+              naver.maps.Service.geocode({address: myaddress}, function(status, response) {
+                  if (status !== naver.maps.Service.Status.OK) {
+                      return alert(myaddress + '의 검색 결과가 없거나 기타 네트워크 에러');
+                  }
+                  var result = response.result;
+                  // 검색 결과 갯수: result.total
+                  // 첫번째 결과 결과 주소: result.items[0].address
+                  // 첫번째 검색 결과 좌표: result.items[0].point.y, result.items[0].point.x
+                  var myaddr = new naver.maps.Point(result.items[0].point.x, result.items[0].point.y);
+                  map.setCenter(myaddr); // 검색된 좌표로 지도 이동
+                  // 마커 표시
+                  var marker = new naver.maps.Marker({
+                    position: myaddr,
+                    map: map
+                  });
+                  // 마커 클릭 이벤트 처리
+                  naver.maps.Event.addListener(marker, "click", function(e) {
+                    if (infowindow.getMap()) {
+                        infowindow.close();
+                    } else {
+                        infowindow.open(map, marker);
+                    }
+                  });
+                  // 마크 클릭시 인포윈도우 오픈
+                  var infowindow = new naver.maps.InfoWindow({
+                      content: '<h4> [네이버 개발자센터]</h4><a href="http://nanuly.kr/" target="_blank"><img src="../img/logo.png"><span class="logo_txt">NanulySoft</span></a>'
+                  });
+              });
+            </script>
+
+            <div class="contact_box">
+                <strong class="contact_txt">인천시 연수구 인천타워대로 99 애니오션빌딩 11층</strong>
+                <p class="contact_txt_p"><span class="contact_txt_span">TEL</span> 0505-550-9600</p>
+                <p class="contact_txt_p"><span class="contact_txt_span">E-Mail</span> help@nanuly.kr</p>
+                <br>
+                <p class="contact_txt_bus">교통편 <span>인천지하철 1호선 지식정보단지역 2번 출구에서 직진 800 미터</span></p>
             </div>
-            <ul>
-                <li><a href="history.html">연혁</a></li>
-                <li><a href="incruit.html">채용</a></li>
-                <li><a class="active" href="location.html">오시는 길</a></li>
-            </ul>
-        </div><!--
-     --><div class="content">
-            <div class="location">
-                <div class="map" style="border:1px solid #8ac469; width:100%;">
-                    <!--img src="../img/img_map.jpg"-->
-                    <div id="nanuly_map"></div>
-                </div>
-                <div class="location-info">
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <th>주소</th>
-                                <td>인천시 연수구 인천타워대로 99 애니오션빌딩 11층</td>
-                            </tr>
-                            <tr>
-                                <th>교통편</th>
-                                <td>인천지하철 1호선 지식정보단지역 2번 출구에서 직진 800 미터</td>
-                            </tr>
-                            <tr>
-                                <th>연락처</th>
-                                <td>0505-550-9600</td>
-                            </tr>
-                            <tr>
-                                <th>이메일</th>
-                                <td>help@nanuly.kr</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="footer">
+            
+
+            
+
+        </section>
+
+
+
+
+
+        
+
+
         <footer>
-            <nav class="footer-nav">
-                <div class="nav-intro">
-                    <h3>회사소개</h3>
+            <div class="footer_container">
+                <div class="footer_container_box">
+                    <div class="footer_left_box">
+                        <nav>
+                            <ul class="footer_list_box">
+                                <li><span>회사소개</span></li>
+                                <li><a href="history.html">연혁</a></li>
+                                <li><a href="incruit.html">채용</a></li>
+                                <li><a href="location.html">오시는길</a></li>
+                            </ul>
+
+                            <ul class="footer_list_box">
+                                <li><span>제품</span></li>
+                                <li><a href="product_cards.html">나누리카드</a></li>
+                                <li><a href="product_boards.html">나루리보드</a></li>
+                                <li><a href="product_pages.html">나누리페이지</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer_right_box">
+                        <nav>
+                            <ul class="footer_list_box">
+                                <li><span>서비스</span></li>
+                                <li><a href="service_geeks.html">나누리재능인</a></li>
+                                <li><a href="service_cards.html">나누리카드</a></li>
+                                <li>&nbsp;</li>
+                            </ul>
+
+                            <ul class="footer_list_box">
+                                <li><span>고객지원</span></li>
+                                <li><a href="contact.html">일대일 문의</a></li>
+                                <li><a href="consulting.html">웹 컨설팅</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+
+                <div class="footer_icon_box">
                     <ul>
-                        <li><a href="history.html">연혁</a></li>
-                        <li><a href="incruit.html">채용</a></li>
-                        <li><a class="active" href="location.html">오시는 길</a></li>
+                        <li><a href="http://www.nanuly.com/" target="blank_"><img src="../img/btn_geeks.png" alt="나누리아이콘"></a></li>
+                        <li><a href="https://github.com/nanuly" target="blank_"><img src="../img/btn_git.png" alt="깃아이콘"></a></li>
+                        <li><a href="https://www.instagram.com/nanuly.kr/" target="blank_"><img src="../img/btn_insta.png" alt="인스타그램아이콘"></a></li>
+                        <li><a href="https://story.kakao.com/nanuly" target="blank_"><img src="../img/btn_story.png" alt="카카오스토리아이콘"></a></li>
                     </ul>
                 </div>
-                <div class="nav-product">
-                    <h3>제품</h3>
-                    <ul>
-                        <li><a href="product_cards.html">나누리카드</a></li>
-                        <li><a href="product_boards.html">나누리보드</a></li>
-                        <li><a href="product_pages.html">나누리페이지</a></li>
-                    </ul>
+
+                <div class="Copyright_box">
+                    Copyright © Nanuly, All rights reserved.
                 </div>
-                <div class="nav-service">
-                    <h3>서비스</h3>
-                    <ul>
-                        <li><a href="service_geeks.html">나누리재능인</a></li>
-                        <li><a href="service_cards.html">나누리카드</a></li>
-                    </ul>
-                </div>
-                <div class="nav-customer">
-                    <h3>고객지원</h3>
-                    <ul>
-                        <li><a href="contact.html">일대일 문의</a></li>
-                        <li><a href="consulting.html">웹 컨설팅</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="share">
-                <ul>
-                    <li>
-                        <a href="http://www.nanuly.com/" target="_blank">
-                            <img src="../img/btn_geeks.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/nanuly" target="_blank">
-                            <img src="../img/btn_git.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com/nanuly.kr" target="_blank">
-                            <img src="../img/btn_insta.png">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://story.kakao.com/nanuly" target="_blank">
-                            <img src="../img/btn_story.png">
-                        </a>
-                    </li>
-                </ul>
             </div>
-            <address>
-                Copyright © Nanuly, All rights reserved.
-            </address>
         </footer>
-    </section>
-    <script>
-    $(document).ready(function() {
-        
-        var oPoint = new nhn.api.map.LatLng(37.3810994, 126.6425142);
-            nhn.api.map.setDefaultPoint('LatLng');
-            oMap = new nhn.api.map.Map('nanuly_map' ,{
-                                    point : oPoint,
-                                    zoom : 11,
-                                    enableWheelZoom : true,
-                                    enableDragPan : true,
-                                    enableDblClickZoom : false,
-                                    mapMode : 0,
-                                    activateTrafficMap : false,
-                                    activateBicycleMap : false,
-                                    minMaxLevel : [ 1, 14 ],
-                                    size : new nhn.api.map.Size(708, 398)
-                            });
-            var mapZoom = new nhn.api.map.ZoomControl(); // - 줌 컨트롤 선언
-            mapZoom.setPosition({left:20, bottom:20}); // - 줌 컨트롤 위치 지정.
-            oMap.addControl(mapZoom); // - 줌 컨트롤 추가.
-            
-            var oSize = new nhn.api.map.Size(28, 37);
-            var oOffset = new nhn.api.map.Size(14, 37);
-            var oIcon = new nhn.api.map.Icon('http://static.naver.com/maps2/icons/pin_spot2.png', oSize, oOffset);
-            // - Draggable Marker 의 경우 Icon 인자는 Sprite Icon이 된다.
-            // - 따라서 Sprite Icon 을 사용하기 위해 기본적으로 사용되는 값을 지정한다.
-            // - Sprite Icon 을 사용하기 위해서 상세한 내용은 레퍼런스 페이지의 nhn.api.map.SpriteIcon 객체를 참조하면 된다.
-            
-            var oMarker1 = new nhn.api.map.Marker(oIcon, { title : '나누리' });  //마커 생성 
-            oMarker1.setPoint(oPoint); //마커 표시할 좌표 선택
-            oMap.addOverlay(oMarker1); //마커를 지도위에 표현 
-            var oLabel1 = new nhn.api.map.MarkerLabel(); // - 마커 라벨 선언. 
-            oMap.addOverlay(oLabel1); // - 마커 라벨 지도에 추가. 기본은 라벨이 보이지 않는 상태로 추가됨. 
-            oLabel1.setVisible(true, oMarker1); // 마커 라벨 보이기 
-        
-        $('nav > ul > li').hover(
-            function() {
-                $(this).find('>a').css('color','#8ac469');
-                $(this).find('>.dropdown').addClass('active');
-            },
-            function() {
-                $(this).find('>a').css('color','#414141');
-                $(this).find('>.dropdown').removeClass('active');
-                $(this).find('>a.active').css('color','#8ac469');
-            }
-        );
-    });
-    </script>
+
+    </article>
 </body>
 </html>
