@@ -12,7 +12,7 @@ $(function(){
   setTimeout(function(){ $(".slide_img1").addClass("active")  },100)
 
   function next(){
-    if( n== 4){ n = 1}
+    if( n== 3){ n = 1}
     $(".slide_box li").stop().fadeOut()
     $(".slide_img"+n).stop().fadeIn()
 
@@ -38,7 +38,7 @@ $(function(){
   $(".slide_left_bnt").click(function(){
     if ( clickble == true) {
       n--
-      if ( n < 1){ n = 3}
+      if ( n < 1){ n = 2}
       $(".slide_box li").stop().fadeOut()
       $(".slide_img"+n).stop().fadeIn()
       clickble = false
@@ -63,6 +63,32 @@ $(function(){
     $(this).stop().toggleClass("active")
     $(this).next().stop().slideToggle()
   })
+
+
+
+  $(".incruit_ul1 > li").mouseenter(function(){
+    $(".incruit_ul1 > li").removeClass("active")
+    $(".incruit_ul1 > li").not($(this)).addClass("active")
+    
+  
+  });
+
+  $(".incruit_ul1 > li").mouseleave(function(){
+    $(".incruit_ul1 > li").removeClass("active")
+  });
+
+  $(".incruit_ul2 > li").mouseenter(function(){
+    $(".incruit_ul2 > li").removeClass("active")
+    $(".incruit_ul2 > li").not($(this)).addClass("active")
+    
+  
+  });
+
+  $(".incruit_ul2 > li").mouseleave(function(){
+    $(".incruit_ul2 > li").removeClass("active")
+  });
+
+ 
 
 
 
