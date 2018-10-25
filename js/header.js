@@ -20,6 +20,29 @@ $(function(){
     })
 
 
+    $(".snb > i").click(function(){
+        $(this).addClass("active")
+        $(".snb .snb_box").stop().fadeToggle(500).toggleClass("active")
+    })
+
+    $(".snb > i.active").click(function(){
+        alert()
+    })
+
+    
+
+    $(".snb .snb_box a").click(function(){
+        li = $(this).attr("data-li")
+        $(".snb .snb_box").stop().fadeOut(500).addClass("off")
+        $(".snb .sub_list"+li).stop().fadeIn(500).addClass("active")
+    })
+
+    $(".snb .sub_list .back").click(function(){
+        $(".snb .snb_box").stop().fadeIn(500).removeClass("off")
+        $(".snb .sub_list").stop().fadeOut(500).removeClass("active")
+    })
+
+
 
     
     $(".gnb > ul > li:eq(0) > a").attr("href", "index.html")
@@ -30,10 +53,17 @@ $(function(){
 
     $(".gnb > ul > li:eq(2) > a").attr("href", "product_cards.html")
     $(".gnb > ul > li:eq(2) > ul > li:eq(0) > a").attr("href", "product_cards.html")
+    $(".gnb > ul > li:eq(2) > ul > li:eq(1) > a").attr("href", "product_boards.html")
+    $(".gnb > ul > li:eq(2) > ul > li:eq(2) > a").attr("href", "product_pages.html")
+
+    $(".gnb > ul > li:eq(3) > a").attr("href", "service_geeks.html")
+    $(".gnb > ul > li:eq(3) > ul > li:eq(0) > a").attr("href", "service_geeks.html")
+    $(".gnb > ul > li:eq(3) > ul > li:eq(1) > a").attr("href", "service_cards.html")
 
 
     $(".gnb > ul > li:eq(4) > a").attr("href", "contact.html")
     $(".gnb > ul > li:eq(4) > ul > li:eq(0) > a").attr("href", "contact.html")
+    $(".gnb > ul > li:eq(4) > ul > li:eq(1) > a").attr("href", "consulting.html")
    
     
 
@@ -46,14 +76,26 @@ $(function(){
     subPage[1] = "history";
     subPage[2] = "incruit";
     subPage[3] = "location";
-    subPage[4] = "cards";
-    subPage[10] = "contact";
+    subPage[4] = "product_cards";
+    subPage[5] = "board";
+    subPage[6] = "pages";
+    subPage[7] = "geeks";
+    subPage[8] = "service_cards";
+    subPage[9] = "contact";
+    subPage[10] = "consulting";
+
+
     var url = location.href;
     var getAr0 = url.indexOf(subPage[0]); //home
     var getAr1 = url.indexOf(subPage[1]); //history
     var getAr2 = url.indexOf(subPage[2]); //incruit
     var getAr3 = url.indexOf(subPage[3]); //location
     var getAr4 = url.indexOf(subPage[4]); //cards
+    var getAr5 = url.indexOf(subPage[5]); //board
+    var getAr6 = url.indexOf(subPage[6]); //pages
+    var getAr7 = url.indexOf(subPage[7]); //geeks
+    var getAr8 = url.indexOf(subPage[8]); //service_cards
+    var getAr9 = url.indexOf(subPage[9]); //contact
     var getAr10 = url.indexOf(subPage[10]); //contact
 
     if(getAr0 != -1){
@@ -89,16 +131,56 @@ $(function(){
         $(".gnb > ul > li:eq(2) > ul > li:eq(0) > a").parent().addClass("active")
         $(".breadcrumbs h1").text("NanulyCard")
         $(".breadcrumbs_ul > li > a").eq(1).text("제품").attr("href" , "product_cards.html")
-        $(".breadcrumbs_ul > li > a").eq(2).text("오시는길").attr("href" , "product_cards.html")
+        $(".breadcrumbs_ul > li > a").eq(2).text("나누리카드").attr("href" , "product_cards.html")
+    };
+
+    if(getAr5 != -1){
+        $(".gnb > ul > li:eq(2) > a").parent().addClass("active")
+        $(".gnb > ul > li:eq(2) > ul > li:eq(1) > a").parent().addClass("active")
+        $(".breadcrumbs h1").text("NanulyBoards")
+        $(".breadcrumbs_ul > li > a").eq(1).text("제품").attr("href" , "product_cards.html")
+        $(".breadcrumbs_ul > li > a").eq(2).text("나누리보드").attr("href" , "product_boards.html")
+    };
+
+    if(getAr6 != -1){
+        $(".gnb > ul > li:eq(2) > a").parent().addClass("active")
+        $(".gnb > ul > li:eq(2) > ul > li:eq(2) > a").parent().addClass("active")
+        $(".breadcrumbs h1").text("NanulyBoards")
+        $(".breadcrumbs_ul > li > a").eq(1).text("제품").attr("href" , "product_cards.html")
+        $(".breadcrumbs_ul > li > a").eq(2).text("나누리페이지").attr("href" , "product_pages.html")
+    };
+
+    if(getAr7 != -1){
+        $(".gnb > ul > li:eq(3) > a").parent().addClass("active")
+        $(".gnb > ul > li:eq(3) > ul > li:eq(0) > a").parent().addClass("active")
+        $(".breadcrumbs h1").text("NanulyGeeks")
+        $(".breadcrumbs_ul > li > a").eq(1).text("서비스").attr("href" , "service_geeks.html")
+        $(".breadcrumbs_ul > li > a").eq(2).text("나누리재능인").attr("href" , "service_geeks.html")
+    };
+
+    if(getAr8 != -1){
+        $(".gnb > ul > li:eq(3) > a").parent().addClass("active")
+        $(".gnb > ul > li:eq(3) > ul > li:eq(1) > a").parent().addClass("active")
+        $(".breadcrumbs h1").text("NanulyCards")
+        $(".breadcrumbs_ul > li > a").eq(1).text("서비스").attr("href" , "service_geeks.html")
+        $(".breadcrumbs_ul > li > a").eq(2).text("나누리카드").attr("href" , "service_cards.html")
     };
 
 
-    if(getAr10 != -1){
+    if(getAr9 != -1){
         $(".gnb > ul > li:eq(4) > a").parent().addClass("active")
         $(".gnb > ul > li:eq(4) > ul > li:eq(0) > a").parent().addClass("active")
         $(".breadcrumbs h1").text("Contact")
         $(".breadcrumbs_ul > li > a").eq(1).text("고객지원").attr("href" , "contact.html")
         $(".breadcrumbs_ul > li > a").eq(2).text("일대일 문의").attr("href" , "contact.html")
+    };
+
+    if(getAr10 != -1){
+        $(".gnb > ul > li:eq(4) > a").parent().addClass("active")
+        $(".gnb > ul > li:eq(4) > ul > li:eq(1) > a").parent().addClass("active")
+        $(".breadcrumbs h1").text("Consulting")
+        $(".breadcrumbs_ul > li > a").eq(1).text("고객지원").attr("href" , "contact.html")
+        $(".breadcrumbs_ul > li > a").eq(2).text("웹 컨설팅").attr("href" , "consulting.html")
     };
 
     // if(getAr2 != -1){
