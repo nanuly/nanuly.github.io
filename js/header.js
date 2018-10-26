@@ -21,12 +21,19 @@ $(function(){
 
 
     $(".snb > i").click(function(){
-        $(this).addClass("active")
-        $(".snb .snb_box").stop().fadeToggle(500).toggleClass("active")
-    })
+        if ($(this).hasClass("active")) {
+                $(this).removeClass("active")
+                $(".snb .snb_box").stop().fadeOut(500).removeClass("active , off")
+                $(".snb .sub_list").stop().fadeOut(500).removeClass("active")
+        }else{
+                $(this).addClass("active")
+                $(".snb .snb_box").stop().fadeIn(500).addClass("active")
+        }
 
-    $(".snb > i.active").click(function(){
-        alert()
+
+
+        // $(this).addClass("active")
+        // $(".snb .snb_box").stop().fadeToggle(500).toggleClass("active")
     })
 
     
@@ -44,28 +51,7 @@ $(function(){
 
 
 
-    
-    $(".gnb > ul > li:eq(0) > a").attr("href", "index.html")
-    $(".gnb > ul > li:eq(1) > a").attr("href", "history.html")
-    $(".gnb > ul > li:eq(1) > ul > li:eq(0) > a").attr("href", "history.html")
-    $(".gnb > ul > li:eq(1) > ul > li:eq(1) > a").attr("href", "incruit.html")
-    $(".gnb > ul > li:eq(1) > ul > li:eq(2) > a").attr("href", "location.html")
-
-    $(".gnb > ul > li:eq(2) > a").attr("href", "product_cards.html")
-    $(".gnb > ul > li:eq(2) > ul > li:eq(0) > a").attr("href", "product_cards.html")
-    $(".gnb > ul > li:eq(2) > ul > li:eq(1) > a").attr("href", "product_boards.html")
-    $(".gnb > ul > li:eq(2) > ul > li:eq(2) > a").attr("href", "product_pages.html")
-
-    $(".gnb > ul > li:eq(3) > a").attr("href", "service_geeks.html")
-    $(".gnb > ul > li:eq(3) > ul > li:eq(0) > a").attr("href", "service_geeks.html")
-    $(".gnb > ul > li:eq(3) > ul > li:eq(1) > a").attr("href", "service_cards.html")
-
-
-    $(".gnb > ul > li:eq(4) > a").attr("href", "contact.html")
-    $(".gnb > ul > li:eq(4) > ul > li:eq(0) > a").attr("href", "contact.html")
-    $(".gnb > ul > li:eq(4) > ul > li:eq(1) > a").attr("href", "consulting.html")
-   
-    
+ 
 
 
 
@@ -183,9 +169,8 @@ $(function(){
         $(".breadcrumbs_ul > li > a").eq(2).text("웹 컨설팅").attr("href" , "consulting.html")
     };
 
-    // if(getAr2 != -1){
-    //     $("li:eq(3) a").addClass("on")
-    // };
+    
+
 
 
 

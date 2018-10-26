@@ -1,4 +1,9 @@
 $(function(){
+	$(document).ready(function(){
+        $("#header").load("nav.html")
+    })
+
+	
     init()
 	
 	function init(){ 
@@ -14,4 +19,6 @@ $(function(){
 	$(window).scroll(function(){ 
 		init()
     })
+
+
 })
