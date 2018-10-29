@@ -19,35 +19,54 @@ $(function(){
     	}
     })
 
-
     $(".snb > i").click(function(){
-        if ($(this).hasClass("active")) {
-                $(this).removeClass("active")
-                $(".snb .snb_box").stop().fadeOut(500).removeClass("active , off")
-                $(".snb .sub_list").stop().fadeOut(500).removeClass("active")
-        }else{
-                $(this).addClass("active")
-                $(".snb .snb_box").stop().fadeIn(500).addClass("active")
-        }
-
-
-
-        // $(this).addClass("active")
-        // $(".snb .snb_box").stop().fadeToggle(500).toggleClass("active")
+        $(".snb_box").css("display" , "block")
     })
+
+    $(".snb_btn_box").click(function(){
+        $(".snb_box").css("display" , "none")
+    })
+
+
+    $(".snb_list_box > li").click(function(){
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active")
+        }else{
+            $(".snb_list_box > li").removeClass("active")
+            $(this).stop().addClass("active") 
+        }
+        
+    })
+
+
+    // $(".snb > i").click(function(){
+    //     if ($(this).hasClass("active")) {
+    //             $(this).removeClass("active")
+    //             $(".snb .snb_box").stop().fadeOut(500).removeClass("active , off")
+    //             $(".snb .sub_list").stop().fadeOut(500).removeClass("active")
+    //     }else{
+    //             $(this).addClass("active")
+    //             $(".snb .snb_box").stop().fadeIn(500).addClass("active")
+    //     }
+
+
+
+    //     // $(this).addClass("active")
+    //     // $(".snb .snb_box").stop().fadeToggle(500).toggleClass("active")
+    // })
 
     
 
-    $(".snb .snb_box a").click(function(){
-        li = $(this).attr("data-li")
-        $(".snb .snb_box").stop().fadeOut(500).addClass("off")
-        $(".snb .sub_list"+li).stop().fadeIn(500).addClass("active")
-    })
+    // $(".snb .snb_box a").click(function(){
+    //     li = $(this).attr("data-li")
+    //     $(".snb .snb_box").stop().fadeOut(500).addClass("off")
+    //     $(".snb .sub_list"+li).stop().fadeIn(500).addClass("active")
+    // })
 
-    $(".snb .sub_list .back").click(function(){
-        $(".snb .snb_box").stop().fadeIn(500).removeClass("off")
-        $(".snb .sub_list").stop().fadeOut(500).removeClass("active")
-    })
+    // $(".snb .sub_list .back").click(function(){
+    //     $(".snb .snb_box").stop().fadeIn(500).removeClass("off")
+    //     $(".snb .sub_list").stop().fadeOut(500).removeClass("active")
+    // })
 
 
 
